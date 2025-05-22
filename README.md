@@ -22,3 +22,37 @@ public class Codeforces {
         }
     }
 }
+//REMOVE DUPLICATE FROM ARRAY AND RETURN NEW ARRAY
+
+import java.util.Scanner;
+
+public class Codeforces {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n =sc.nextInt();
+        int[] arr = new int[n];
+        boolean [] keep = new boolean[n];
+        int count=0;
+        for(int i=0;i<n;i++) {
+            arr[i] = sc.nextInt();
+        }
+        for(int i=0;i<n;i++) {
+            keep[i] = true;
+            for(int j=i+1;j<n;j++) {
+                if(arr[i]==arr[j]) {
+                    keep[i] = false;
+                    break;
+                }
+            }
+            if(keep[i]) {
+                count++;
+            }
+        }
+        System.out.println(count);
+            for (int j = 0; j < arr.length; j++) {
+                if (keep[j]) {
+                    System.out.print(arr[j] + " ");
+                }
+            }
+    }
+}
