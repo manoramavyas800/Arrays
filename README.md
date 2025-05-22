@@ -56,3 +56,31 @@ public class Codeforces {
             }
     }
 }
+
+//ADD EXTRA ELEMENT IN ARRAY
+/*     4
+       3
+       1 2 3
+       [1, 2, 5, 3]   */
+
+       import java.util.Arrays;
+import java.util.Scanner;
+
+public class Code1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int cap = sc.nextInt();
+                int n = sc.nextInt();
+                int[] arr = new int[cap];
+                for (int i = 0; i < n; i++) {
+                    arr[i] = sc.nextInt();
+                }
+                for (int i = n; i>=2; i--) {
+                    arr[i] = arr[i-1];
+                }
+                arr[2]=5;
+
+                System.out.println( Arrays.toString(arr));
+
+            }
+        }
