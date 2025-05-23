@@ -111,3 +111,22 @@ public class Code1 {
             System.out.println(Arrays.toString(arr));
     }
 }
+
+//CREAT A CAP ARRAY OR INSERT SOMTING DIFFERENT IN IT.
+
+import java.util.Arrays;
+import java.util.Scanner;
+public class Code1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int cap = sc.nextInt();
+        int n = sc.nextInt();
+        int[] arr = new int[cap];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+       arr[2]=4;
+        arr[3]=5;
+            System.out.println(Arrays.toString(arr));
+    }
+}
