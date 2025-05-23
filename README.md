@@ -84,3 +84,30 @@ public class Code1 {
 
             }
         }
+
+    //CREATE A CAP ARRAY OR DELET A ELEMENT AND THEN SHIFT THR REST OF THE LEFT.
+
+    import java.util.Arrays;
+import java.util.Scanner;
+public class Code1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int cap = sc.nextInt();
+        int n = sc.nextInt();
+        int[] arr = new int[cap];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        int res = 0;
+        for (int i = 0; i < n; i++) {
+            if (arr[i] == 4) {
+                res = i;
+                for (int j = res; j < n; j++) {
+                    arr[j] = arr[j + 1];
+
+                }
+            }
+        }
+            System.out.println(Arrays.toString(arr));
+    }
+}
