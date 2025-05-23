@@ -130,3 +130,46 @@ public class Code1 {
             System.out.println(Arrays.toString(arr));
     }
 }
+//FIND MIN NUMBER IN ARRAY
+import java.util.Arrays;
+import java.util.Scanner;
+public class Code1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        int min = Integer.MAX_VALUE;
+        for (int i = 0; i < n; i++) {
+             min = Math.min(min, arr[i]);
+            }
+        
+        System.out.println(min);
+        System.out.println(Arrays.toString(arr));
+
+    }
+}
+//FIND MAX NUM IN ARRAY.
+
+import java.util.Arrays;
+import java.util.Scanner;
+public class Code1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        int max = Integer.MIN_VALUE;
+        for (int i = 0; i < n; i++) {
+             max = Math.max(max, arr[i]);
+            }
+
+        System.out.println(max);
+        System.out.println(Arrays.toString(arr));
+
+    }
+}
