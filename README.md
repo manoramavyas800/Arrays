@@ -228,3 +228,27 @@ public class SortedArray {
        sc.close();
     }
     }
+//PRINT BENEFITE AFTER SELLING.
+
+import java.util.Scanner;
+public class Benefite {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[]=new int[n];
+        int sell=0;
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        for(int i = 1; i < n; i++) {
+            int benefit = arr[i] - arr[i-1];
+            if ((benefit >0) ){
+                    sell += benefit;
+
+            }
+        }
+           System.out.println(sell);
+
+       sc.close();
+    }
+    }
