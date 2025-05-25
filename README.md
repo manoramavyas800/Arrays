@@ -3,7 +3,7 @@
 like[2,2,3,4,4] there ans is 3   */
 
 import java.util.Arrays;
-public class Codeforces {
+public class ChackFrequency {
     public static void main(String[] args) {
         int[] arr = {4,5,5,5,5, 6, 7, 7};
         Arrays.sort(arr);
@@ -26,7 +26,7 @@ public class Codeforces {
 
 import java.util.Scanner;
 
-public class Codeforces {
+public class Duplicate {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n =sc.nextInt();
@@ -66,7 +66,7 @@ public class Codeforces {
        import java.util.Arrays;
 import java.util.Scanner;
 
-public class Code1 {
+public class Patterns {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int cap = sc.nextInt();
@@ -89,7 +89,7 @@ public class Code1 {
 
     import java.util.Arrays;
 import java.util.Scanner;
-public class Code1 {
+public class Shifting {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int cap = sc.nextInt();
@@ -116,7 +116,7 @@ public class Code1 {
 
 import java.util.Arrays;
 import java.util.Scanner;
-public class Code1 {
+public class InsertValue {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int cap = sc.nextInt();
@@ -133,7 +133,7 @@ public class Code1 {
 //FIND MIN NUMBER IN ARRAY
 import java.util.Arrays;
 import java.util.Scanner;
-public class Code1 {
+public class MinNum {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -155,7 +155,7 @@ public class Code1 {
 
 import java.util.Arrays;
 import java.util.Scanner;
-public class Code1 {
+public class MaxNum {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -177,7 +177,7 @@ public class Code1 {
 //FIND MAX AND SECOUND MAX IN ARRAY.
 
 import java.util.Scanner;
-public class Code1 {
+public class MaxNum {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -199,5 +199,32 @@ public class Code1 {
        }
         System.out.println(maxm);
        System.out.println(secoundMaxm);
+    }
+    }
+//CHACK ARRAY IS SORTADE OR NOT.
+
+
+import java.util.Scanner;
+public class SortedArray {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[]=new int[n];
+        boolean isSortad=true;
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        for(int i = 1; i < n; i++) {
+            if(arr[i] < arr[i - 1]) {
+                isSortad = false;
+                break;
+           }
+           }
+       if(isSortad) {
+           System.out.println("YAS");
+       }else{
+           System.out.println("NO");
+       }
+       sc.close();
     }
     }
