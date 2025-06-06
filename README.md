@@ -279,3 +279,36 @@ public class FirstSameNum {
        sc.close();
     }
     }
+//reverse arr
+
+public class ReverseArray {
+    public static void swap(int[] arr, int left, int right) {
+        int temp = arr[left];
+        arr[left] = arr[right];
+        arr[right] = temp;
+    }
+    public static int[] reverse(int[] arr) {
+        int left = 0;
+        int right = arr.length - 1;
+        while (left < right) {
+            swap(arr, left, right);
+            left++;
+            right--;
+        }
+        return arr;
+    }
+    static void printArray(int[] arr) {
+        int[] ans = reverse(arr);
+        for (int i = 0; i < ans.length; i++) {
+            System.out.print(ans[i] + " ");
+        }
+        System.out.println();
+    }
+    public static void main(String[] args) {
+        int[] arr = {1,2,3,4,5,6,7,8,9,8,11};
+        int n = arr.length;
+      printArray(arr);
+        reverse(arr);
+
+    }
+}
