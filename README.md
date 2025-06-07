@@ -312,3 +312,40 @@ public class ReverseArray {
 
     }
 }
+//ROTATE THE ARRAY KTH TIME.
+import java.util.Scanner;
+public class Permutation {
+
+    public static int[] reverse(int[] arr,int k) {
+        int n = arr.length;
+         k=k%n;
+        int []ans = new int[n];
+        int j=0;
+        for(int i=n-k;i<n;i++) {
+            ans[j++] = arr[i];
+        }
+            for(int i=0;i<n-k;i++) {
+                ans[j++] = arr[i];
+        }
+        return ans;
+    }
+    public static void printArray(int[] arr) {
+        for (int j : arr) {
+            System.out.print(j + " ");
+        }
+    }
+    public static void main(String[] args) {
+     Scanner scanner=new Scanner(System.in);
+     System.out.println("Enter the size of the array");
+    int n=scanner.nextInt();
+    System.out.println("Enter the elements of the array");
+    int[] arr=new int[n];
+    for(int i=0;i<n;i++){
+        arr[i]=scanner.nextInt();
+    }
+    System.out.println("Enter the value of k:");
+    int k=scanner.nextInt();
+    int[] ans=reverse(arr,k);
+    printArray(ans);
+    }
+}
