@@ -393,3 +393,59 @@ public class SortedArray {
         printArray(arr);
     }
 }
+//SORTED ARRAY IN NON-DECREASING ORDER
+
+import java.util.Scanner;
+public class SortedArray {
+    static void reverse(int[] ans) {
+        int i=0,j=ans.length-1;
+        while(i<j) {
+            swap(ans,i,j);
+            i++;
+            j--;
+        }
+    }
+    static int[] sortedArray(int[] arr) {
+        int n = arr.length;
+       int left=0;
+       int right=n-1;
+       int []ans=new int[n];
+        int k=0;
+        while(left<=right) {
+            if (Math.abs(arr[left]) > Math.abs(arr[right])) {
+                ans[k++] = arr[left] * arr[left];
+                left++;
+            } else {
+                ans
+                        [k++] = arr[right] * arr[right];
+                right--;
+            }
+        }
+       return ans;
+    }
+    static void printArray(int[] arr) {
+        for (int j : arr) {
+            System.out.print(j + " ");
+        }
+        System.out.println();
+    }
+    static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of the array");
+        int n = sc.nextInt();
+        System.out.println("Enter the elements of the array");
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+       int[]ans=sortedArray(arr);
+        reverse(ans);
+        printArray(ans);
+    }
+}
