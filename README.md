@@ -512,3 +512,45 @@ public class PrefSum {
         printArray(ans);
     }
 }
+//Given an array of int of size n. Answer q querise where you need to print the sum of value in given range of indices from l to r (both included)
+Note= The value of l and r in queries follow 1-based indexing.
+
+import java.util.Scanner;
+public class PrefixxSum {
+    static int[] prefixSum(int[]arr ) {
+        arr[0] = 0;
+        for(int i=1;i<arr.length;i++) {
+            arr[i]= arr[i]+arr[i-1];
+        }
+        return arr;
+    }
+    static void printArray(int[] arr) {
+        for (int j : arr) {
+            System.out.print(j + " ");
+        }
+        System.out.println();
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of the array");
+        int n = sc.nextInt();
+        System.out.println("Enter the elements of the array");
+        int[] arr = new int[n+1];
+        for (int i = 1; i <= n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+       int []prfxSum = prefixSum(arr);
+        printArray(prfxSum);
+        System.out.println("Enter your quirs");
+        int quirs = sc.nextInt();
+        while (quirs --> 0) {
+            System.out.println("Enter your first range");
+            int range = sc.nextInt();
+            System.out.println("Enter your last range");
+            int l=sc.nextInt();
+            int ans=prfxSum[range]-prfxSum[l-1];
+                    System.out.println(ans);
+        }
+    }
+}
