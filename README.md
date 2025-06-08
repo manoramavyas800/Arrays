@@ -554,3 +554,39 @@ public class PrefixxSum {
         }
     }
 }
+//Chack prefixSum are equal or not in SufixSum.
+
+import java.util.Scanner;
+public class Codeforces {
+    static boolean prefixSum(int[]arr ) {
+        int totalSum=findArraySum(arr);
+        int prefixSum=0;
+        for(int i=0;i<arr.length;i++) {
+            prefixSum+=arr[i];
+            int sufixSum=findArraySum(arr)-prefixSum;
+            if(sufixSum==prefixSum) {
+                return true;
+            }
+        }
+        return false;
+    }
+    static int findArraySum(int[] arr) {
+        int totalSum=0;
+        for(int i=0;i<arr.length;i++) {
+            totalSum+=arr[i];
+        }
+        return totalSum;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of the array");
+        int n = sc.nextInt();
+        System.out.println("Enter the elements of the array");
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        System.out.println("The sum of the elements of the array is:  "+prefixSum(arr));
+
+    }
+}
